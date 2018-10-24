@@ -1,8 +1,9 @@
 # church_members_events
 
-A new Flutter project.
+First Flutter project.
 
 ## Getting Started
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+Must have a backend node.js server api
+
+ 
