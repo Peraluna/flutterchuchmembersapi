@@ -48,3 +48,34 @@ Map<String, dynamic> _$KelompokModelToJson(KelompokModel instance) {
   writeNotNull('anggotaKelompok', instance.anggotaKelompok);
   return val;
 }
+
+KelompokAnggotaModel _$KelompokAnggotaModelFromJson(Map<String, dynamic> json) {
+  return KelompokAnggotaModel(
+      id: json['_id'] as String,
+      idAnggota: json['idAnggota'] as String,
+      rincianAnggota: json['_idAnggota'] == null
+          ? null
+          : AnggotaModel.fromJson(json['_idAnggota'] as Map<String, dynamic>),
+      jabatan: json['jabatan'] as String,
+      tglJabatan: json['tglJabatan'] == null
+          ? null
+          : DateTime.parse(json['tglJabatan'] as String));
+}
+
+Map<String, dynamic> _$KelompokAnggotaModelToJson(
+    KelompokAnggotaModel instance) {
+  var val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('_id', instance.id);
+  writeNotNull('idAnggota', instance.idAnggota);
+  writeNotNull('_idAnggota', instance.rincianAnggota);
+  writeNotNull('jabatan', instance.jabatan);
+  writeNotNull('tglJabatan', instance.tglJabatan?.toIso8601String());
+  return val;
+}

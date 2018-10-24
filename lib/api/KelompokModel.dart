@@ -12,7 +12,7 @@ class KelompokModel {
     this.ketKelompok,
     this.jenisKelompok,
     this.tglDibentuk,
-    List<KelompokAnggotaModel> anggotaKelompok,
+    this.anggotaKelompok,
     this.idPemimpinKelompok,
     this.fotoProfil,
   });
@@ -72,7 +72,8 @@ class KelompokModel {
   }
 }
 
-// @JsonSerializable(includeIfNull: false)
+@JsonSerializable(includeIfNull: false)
+//@JsonSerializable()
 class KelompokAnggotaModel {
   KelompokAnggotaModel({
     this.id,
